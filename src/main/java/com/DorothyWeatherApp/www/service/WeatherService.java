@@ -23,6 +23,7 @@ public class WeatherService {
         WeatherResponse response = restTemplate.getForObject(url, WeatherResponse.class);
 
         return response != null ? response.getMain().getTemp() : null;
+
     }
 
 /*    public WeatherResponse getWeather(String city) {

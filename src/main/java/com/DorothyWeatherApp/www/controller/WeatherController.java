@@ -11,7 +11,7 @@ public class WeatherController {
 
     @Autowired
     private WeatherService weatherService;
-
+// get temperature details with city name
     @GetMapping("/temperature")
     public String getTemperature(@RequestParam String city) {
         Double temp = weatherService.getTemperature(city);

@@ -21,6 +21,7 @@ public class WeatherResponse {
     }
 
     public static class Main {
+
         private double temp;
 
         public double getTemp() {

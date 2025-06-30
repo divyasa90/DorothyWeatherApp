@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Ignore build output -- ignore TARGET FOLDER
+/target
+# Ignore application.properties inside resources
+src/main/resources/application.properties
+/.idea

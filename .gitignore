@@ -6,3 +6,4 @@
 # Ignore application.properties inside resources
 src/main/resources/application.properties
 /.idea
+/.vscode

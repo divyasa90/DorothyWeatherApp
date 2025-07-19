@@ -11,15 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("geo/1.0/direct")
+@RequestMapping("/geo")
 public class GeocodingAPI {
 
     @Autowired
     public GeocodingService geocodingService;
 
     //get coordinates with city name
-    @GetMapping("/coordinates")
+    @GetMapping("/getcoordinatesbycity")
     public List<GeocodingResponse> getCoordinatesbyCityName(@RequestParam String city){
         return geocodingService.getGeocodingData(city);
     }
+
+    //get coordinates by zip code
+    @GetMapping ("/getcoordinatesbyzipcode")
+    public List<GeocodingResponse> getCoordinatesbyZipcode(@RequestParam String zip){
+        return geocodingService.getGeocodingDatabyZipcode(zip);
+    }
 }
+

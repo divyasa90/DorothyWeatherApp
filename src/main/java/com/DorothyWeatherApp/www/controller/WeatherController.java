@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/data/2.5/weather")
+@RequestMapping("/weather")
 public class WeatherController {
 
     @Autowired
@@ -16,7 +16,7 @@ public class WeatherController {
     @GetMapping("/temperature")
     public String getTemperature(@RequestParam String city) {
         Double temp = weatherService.getTemperature(city);
-        return temp != null ? String.format("Current temperature in %s is %.2f°C", weatherService.getCity(), temp) : "Temperature data not available.";
+        return temp != null ? String.format("Current temperature in %s is %.2f°C", city, temp) : "Temperature data not available.";
     }
 
  /*   @GetMapping("/{city}")

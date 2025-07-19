@@ -13,8 +13,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GeocodingResponse {
+
     @JsonProperty("zip")
     private String zipcode;
+
     private String name;
     private Double lat;
     private Double lon;

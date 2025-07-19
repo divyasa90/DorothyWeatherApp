@@ -5,7 +5,6 @@ import com.DorothyWeatherApp.www.entity.GeocodingResponse;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -55,7 +54,6 @@ public class GeocodingService {
         } catch (Exception e) {
             throw new RuntimeException("Error while calling Geocoding API with zip code: " + e.getMessage(), e);
         }
-
     }
 }
 
